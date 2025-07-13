@@ -42,7 +42,8 @@ def preprocess(csv):
     'koi_kepmag'
     ]
     cleaned = df.drop(columns = columns_to_drop)
-    df.dropna()
+    cleaned = df.dropna(subset=['koi_disposition'])
+    cleaned = df.fillna(df.mean(numeric_only=True))
 
     le = LabelEncoder()
     cleaned['output'] = le.fit_transform(cleaned['koi_disposition'])
@@ -68,6 +69,4 @@ def preprocess(csv):
     y = cleaned['output']
     
     return X, y, le
-
-
 
