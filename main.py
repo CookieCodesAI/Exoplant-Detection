@@ -11,24 +11,25 @@ def main():
     evaluate(model, X_test, y_test)
     
     features = {
-        'koi_period': 12.34,      
-        'koi_duration': 3.2,      
-        'koi_depth': 500.0,         
-        'koi_prad': 2.5,           
-        'koi_teq': 800,            
-        'koi_insol': 100.0,         
-        'koi_model_snr': 50.0,      
-        'koi_steff': 5778,         
-        'koi_slogg': 4.4,           
-        'koi_srad': .9 
-    }
+    'koi_period': 0.75,         
+    'koi_duration': 1.2,
+    'koi_depth': 50.0,          
+    'koi_prad': 0.3,       
+    'koi_teq': 3000.0,         
+    'koi_insol': 5000.0,   
+    'koi_model_snr': 3.1,     
+    'koi_steff': 6500.0,         
+    'koi_slogg': 4.9,            
+    'koi_srad': 1.8               
+}
+
     
     prediction = predict_exoplanet(features)
     if prediction == 0:
         result = "Confirmed"
     else:
         result = "False Positive"
-    print("This stellar object is: ", result)
+    print("This stellar object is most likely a: ", result)
 
 if __name__ == '__main__':
     main()

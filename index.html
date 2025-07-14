@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+         <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet"/>
+         <link href="style.css" rel = "stylesheet">
+    </head>
+    <body>
+        <h1>Exoplanet Detection</h1>
+        <form action="/" method = "POST" id = "user-input">
+            <label for="koi_period">Oribtal Period (days)</label>
+            <input type="number" name = "koi_period" required>
+
+            <label for="koi_duration">Transit Duration (hours)</label>
+            <input type="number" name = "koi_duration" required>
+
+            <label for="koi_prad">Planetary Radius (Earth radii)</label>
+            <input type="number" name = "koi_prad" required>
+
+            <label for="koi_teq">Equillibrium Temperature (K)</label>
+            <input type="number" name = "koi_teq" required>
+
+            <label for="koi_insol">Insolation Flux (Earth flux)</label>
+            <input type="number" name = "koi_insol" required>
+
+            <label for="koi_model_snr">Transit Signal-to-Noise</label>
+            <input type="number" name = "koi_model_snr" required>
+
+            <label for="koi_steff">Stellar Effective Temperature (K)</label>
+            <input type="number" name = "koi_steff" required>
+
+            <label for="koi_slogg">Stellar Surface Gravity (log10(cm/s**2))</label>
+            <input type="number" name = "koi_slogg" required>
+
+            <label for="koi_srad">Stellar Radius (Solar radii)</label>
+            <input type="number" name = "koi_srad" required>
+
+            <button type ="submit">Submit</button>
+
+            <div id="result"></div>
+        </form>
+    </body>
+</html>
