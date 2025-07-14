@@ -46,12 +46,12 @@ def preprocess(csv):
     'koi_fpflag_ec'
     ]
     cleaned = df.drop(columns = columns_to_drop)
-    cleaned = df.dropna(subset=['koi_disposition'])
-    cleaned = df.fillna(df.mean(numeric_only=True))
-
+    cleaned = cleaned.dropna(subset=['koi_disposition'])
+    cleaned = cleaned.fillna(df.mean(numeric_only=True))
+    cleaned = cleaned[cleaned['koi_disposition'] != 'CANDIDATE']
     le = LabelEncoder()
     cleaned['output'] = le.fit_transform(cleaned['koi_disposition'])
-
+    print(dict(enumerate(le.classes_)))
     features = [
         'koi_period', 
         'koi_duration', 

@@ -14,7 +14,7 @@ def make_pipeline():
 
 def make_model(pipeline, X, y):
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
-    pipeline.fit(X_train, y_train)
-    model = joblib.dump(pipeline, "models/decision_tree.pkl")
-    return pipeline, X_train, X_test,  y_train, y_test, model
+    pipeline = pipeline.fit(X_train, y_train)
+    joblib.dump(pipeline, "models/decision_tree.pkl")
+    return pipeline, X_train, X_test,  y_train, y_test
 
