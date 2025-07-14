@@ -1,4 +1,3 @@
-import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.impute import SimpleImputer

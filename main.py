@@ -24,8 +24,11 @@ def main():
     }
     
     prediction = predict_exoplanet(features)
-
-    print("This stellar object is: ", str(prediction))
+    if prediction == 0:
+        result = "Confirmed"
+    else:
+        result = "False Positive"
+    print("This stellar object is: ", result)
 
 if __name__ == '__main__':
     main()

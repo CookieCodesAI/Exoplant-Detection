@@ -1,5 +1,4 @@
 import pandas as pd
-import numpy as np
 import joblib 
 
 def predict_exoplanet(features):

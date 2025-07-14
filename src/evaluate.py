@@ -1,6 +1,4 @@
-import pandas as pd
 import matplotlib.pyplot as plt
-import seaborn as sns
 from sklearn.metrics import classification_report, accuracy_score, ConfusionMatrixDisplay, confusion_matrix, roc_curve
 
 def evaluate(model, X_test, y_test):
