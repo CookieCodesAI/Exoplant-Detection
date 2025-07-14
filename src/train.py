@@ -15,7 +15,7 @@ def predict_exoplanet(features):
         'koi_slogg', 
         'koi_srad'
         ]
-    user_input = pd.DataFrame([features], columns = order)
+    user_input = pd.DataFrame([[features[feat] for feat in order]], columns=order)
     model = joblib.load('models/decision_tree.pkl')
     prediction = model.predict(user_input)
     return prediction[0]

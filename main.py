@@ -21,9 +21,7 @@ def main():
     'koi_steff': 6500.0,         
     'koi_slogg': 4.9,            
     'koi_srad': 1.8               
-}
-
-    
+}   
     prediction = predict_exoplanet(features)
     if prediction == 0:
         result = "Confirmed"
