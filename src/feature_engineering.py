@@ -39,7 +39,11 @@ def preprocess(csv):
     'koi_srad_err2',
     'ra',
     'dec',
-    'koi_kepmag'
+    'koi_kepmag',
+    'koi_fpflag_nt', 
+    'koi_fpflag_ss',
+    'koi_fpflag_co', 
+    'koi_fpflag_ec'
     ]
     cleaned = df.drop(columns = columns_to_drop)
     cleaned = df.dropna(subset=['koi_disposition'])
@@ -58,11 +62,7 @@ def preprocess(csv):
         'koi_model_snr', 
         'koi_steff',
         'koi_slogg', 
-        'koi_srad', 
-        'koi_fpflag_nt', 
-        'koi_fpflag_ss',
-        'koi_fpflag_co', 
-        'koi_fpflag_ec'
+        'koi_srad'
         ]
     
     X = cleaned[features] 
