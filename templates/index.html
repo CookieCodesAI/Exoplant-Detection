@@ -2,7 +2,7 @@
 <html>
     <head>
          <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet"/>
-         <link href="style.css" rel = "stylesheet">
+         <link href="static/style.css" rel = "stylesheet">
     </head>
     <body>
         <h1>Exoplanet Detection</h1>
@@ -39,7 +39,9 @@
 
             <button type ="submit">Submit</button>
 
-            <div id="result"></div>
+            {% if result %}
+                <div id="result">{{ result }}</div>
+            {% endif %}
         </form>
     </body>
 </html>
