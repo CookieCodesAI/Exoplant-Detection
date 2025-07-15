@@ -20,10 +20,10 @@ def index():
         }
         prediction = predict_exoplanet(features)
         if prediction == 0:
-            final = "Confirmed"
+            final = "an exoplanet"
         else:
-            final = "False Positive"
-        result = f"This stellar object is most likely: {final}"
+            final = "not an exoplanet"
+        result = f"This stellar object is most likely {final}"
     return render_template("index.html", result = result )
 if __name__ == "__main__":
     app.run(debug=True)
